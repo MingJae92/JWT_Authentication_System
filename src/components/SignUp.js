@@ -8,8 +8,8 @@ import {
   Grid,
   Box,
 } from '@mui/material';
+import { Link } from 'react-router-dom';
 
-function SignUp() {
   
   
   const SignUp = () => {
@@ -126,15 +126,13 @@ function SignUp() {
               Sign Up
             </Button>
             <Box ml={1}>
-              <Button color="primary" onClick={handleLogin}>
-                Login
-              </Button>
+              <Link to="/"><Button color="primary" onClick={handleLogin}>Login</Button></Link>
             </Box>
           </Box>
         </Box>
       </Container>
     );
   };
-}
+
 
 export default SignUp

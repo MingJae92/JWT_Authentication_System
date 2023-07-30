@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import { Link } from 'react-router-dom';
 import {
   TextField,
   Button,
@@ -95,21 +95,14 @@ const LoginForm = () => {
               />
             </Grid>
             <Grid item xs={12}>
-              <Button
-                variant="contained"
-                color="primary"
-                fullWidth
-                onClick={handleLogin}
-              >
-                Login
-              </Button>
+              <Link to ={"/Login"}> <Button variant="contained" color="primary" fullWidthonClick={handleLogin}>Login</Button></Link>
             </Grid>
           </Grid>
         </form>
       </Box>
       <Box mt={2} textAlign="center" width="100%">
         <Typography variant="body2" component="div">
-          <Box  display="inline-block">
+          <Box display="inline-block">
             Already have an account? Login
           </Box>
         </Typography>
@@ -124,15 +117,12 @@ const LoginForm = () => {
         alignItems="center"
         justifyContent="center"
       >
-       
+
         <Box display="flex" justifyContent="center">
-      <Button color="primary" onClick={handleSignUp}>
-            Sign Up
-          </Button>
+          <Link to="/SignUp"><Button color="primary" onClick={handleSignUp}>Sign Up</Button></Link>
+          
           <Box ml={1}>
-            <Button color="primary" onClick={handleLogin}>
-              Login
-            </Button>
+            <Link to="/"></Link><Button color="primary" onClick={handleLogin}>Login</Button>
           </Box>
         </Box>
       </Box>
